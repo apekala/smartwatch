@@ -50,6 +50,23 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
+DocumentPath=C:\Users\user\Downloads\LIB_B3U-3000PM-B\B3U-3000PM-B\Altium\B3U3000PMB.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=AGGRLUQZ
+
+[Document2]
 DocumentPath=C:\Users\user\Downloads\crystal\crystal.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -66,7 +83,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ZKUUCIRF
 
-[Document2]
+[Document3]
 DocumentPath=C:\Users\user\Downloads\power switch\power switch.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -83,7 +100,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XXSNBNCF
 
-[Document3]
+[Document4]
 DocumentPath=C:\Users\user\Downloads\bma456\bma456.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -100,7 +117,24 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HBXNHHJN
 
-[Document4]
+[Document5]
+DocumentPath=C:\Users\user\Downloads\LIB_B3U-3000PM-B\B3U-3000PM-B\Altium\B3U-3000PM-B.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=BWKFHGGB
+
+[Document6]
 DocumentPath=C:\Users\user\Downloads\crystal\crystal.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -117,7 +151,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UYTXEIJP
 
-[Document5]
+[Document7]
 DocumentPath=C:\Users\user\Downloads\power switch\power switch.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -134,7 +168,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SDEFNJDH
 
-[Document6]
+[Document8]
 DocumentPath=C:\Users\user\Downloads\bma456\bma456.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -151,7 +185,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CRSISUAF
 
-[Document7]
+[Document9]
 DocumentPath=accelerometer.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -168,7 +202,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=KLBIUQRX
 
-[Document8]
+[Document10]
 DocumentPath=Schlib1.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -185,7 +219,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EWGGAQJH
 
-[Document9]
+[Document11]
 DocumentPath=C:\Users\user\Downloads\power switch\vibration.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -202,7 +236,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QYAIFAVL
 
-[Document10]
+[Document12]
 DocumentPath=32.768_crystal.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
