@@ -67,7 +67,7 @@ GenerateClassCluster=0
 DocumentUniqueId=LBYTXJAU
 
 [Document2]
-DocumentPath=Schlib1.SchLib
+DocumentPath=e-Paper.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -84,7 +84,7 @@ GenerateClassCluster=0
 DocumentUniqueId=RPQTBBLE
 
 [Document3]
-DocumentPath=PcbLib2.PcbLib
+DocumentPath=e-Paper.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
