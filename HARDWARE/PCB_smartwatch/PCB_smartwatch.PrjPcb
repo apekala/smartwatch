@@ -220,23 +220,6 @@ GenerateClassCluster=0
 DocumentUniqueId=EWGGAQJH
 
 [Document11]
-DocumentPath=zasilanie.Harness
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document12]
 DocumentPath=usb.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -253,7 +236,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document13]
+[Document12]
 DocumentPath=Schlib1-zasilanie.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -270,7 +253,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YXHCKNQG
 
-[Document14]
+[Document13]
 DocumentPath=PcbLib-zasilanie.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -287,7 +270,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=FOXNVASS
 
-[Document15]
+[Document14]
 DocumentPath=rlc.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1340,7 +1323,7 @@ UpdateToLatestRevision=1
 PartTypes=0
 ComponentLibIdentifierKind0=Library Name And Type
 ComponentLibraryIdentifier0=e-Paper.SchLib
-ComponentDesignItemID0=
+ComponentDesignItemID0=Res-10K
 ComponentSymbolReference0=Res-10K
 ComponentUpdate0=1
 ComponentIsDeviceSheet0=0
