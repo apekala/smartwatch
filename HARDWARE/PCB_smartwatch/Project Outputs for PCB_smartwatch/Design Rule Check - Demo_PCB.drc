@@ -1,0 +1,79 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Ktoœ2\Desktop\studia\4sem\PBL4\smartwatch\HARDWARE\PCB_smartwatch\Demo_PCB.PcbDoc
+Date     : 15.04.2024
+Time     : 03:02:18
+
+Processing Rule : Clearance Constraint (Gap=0.12mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (All),(All)
+   Violation between Clearance Constraint: (0.05mm < 0.2mm) Between Area Fill (18.15mm,30.675mm) (21.15mm,35.675mm) on Keep-Out Layer And Pad *1-G2(22.4mm,34.275mm) on Top Layer 
+   Violation between Clearance Constraint: (0.05mm < 0.2mm) Between Area Fill (18.15mm,30.675mm) (21.15mm,35.675mm) on Keep-Out Layer And Pad *1-G3(22.4mm,33.125mm) on Top Layer 
+   Violation between Clearance Constraint: (0.05mm < 0.2mm) Between Area Fill (18.15mm,30.675mm) (21.15mm,35.675mm) on Keep-Out Layer And Pad *1-G4(22.4mm,31.975mm) on Top Layer 
+   Violation between Clearance Constraint: (0.05mm < 0.2mm) Between Area Fill (18.15mm,30.675mm) (21.15mm,35.675mm) on Keep-Out Layer And Pad *1-G5(16.9mm,31.975mm) on Top Layer 
+   Violation between Clearance Constraint: (0.05mm < 0.2mm) Between Area Fill (18.15mm,30.675mm) (21.15mm,35.675mm) on Keep-Out Layer And Pad *1-G6(16.9mm,33.125mm) on Top Layer 
+   Violation between Clearance Constraint: (0.05mm < 0.2mm) Between Area Fill (18.15mm,30.675mm) (21.15mm,35.675mm) on Keep-Out Layer And Pad *1-G7(16.9mm,34.275mm) on Top Layer 
+Rule Violations :6
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.12mm) (Max=1.5mm) (Preferred=0.2mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.2mm) (Conductor Width=0.25mm) (Air Gap=0.2mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.15mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.25mm) (Max=6mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.52mm) (All),(All)
+   Violation between Hole To Hole Clearance Constraint: (0.477mm < 0.52mm) Between Via (23.173mm,33.489mm) from Top Layer to Bottom Layer And Via (23.289mm,34.309mm) from Top Layer to Bottom Layer 
+Rule Violations :1
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)
+   Violation between Minimum Solder Mask Sliver Constraint: (0.071mm < 0.1mm) Between Pad IC1-1(36.88mm,23.231mm) on Top Layer And Pad IC1-32(37.58mm,22.531mm) on Top Layer [Top Solder] Mask Sliver [0.071mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.071mm < 0.1mm) Between Pad IC1-16(32.68mm,19.031mm) on Top Layer And Pad IC1-17(33.38mm,18.331mm) on Top Layer [Top Solder] Mask Sliver [0.071mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.071mm < 0.1mm) Between Pad IC1-24(36.88mm,18.331mm) on Top Layer And Pad IC1-25(37.58mm,19.031mm) on Top Layer [Top Solder] Mask Sliver [0.071mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.071mm < 0.1mm) Between Pad IC1-8(33.38mm,23.231mm) on Top Layer And Pad IC1-9(32.68mm,22.531mm) on Top Layer [Top Solder] Mask Sliver [0.071mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.065mm < 0.1mm) Between Pad J1-A12(44.54mm,16.176mm) on Top Layer And Pad J1-MH4(44.62mm,17.746mm) on Multi-Layer [Top Solder] Mask Sliver [0.065mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.065mm < 0.1mm) Between Pad J1-B12(44.54mm,10.676mm) on Top Layer And Pad J1-MH3(44.62mm,9.106mm) on Multi-Layer [Top Solder] Mask Sliver [0.065mm]
+Rule Violations :6
+
+Processing Rule : Silk To Solder Mask (Clearance=0.06mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0.12mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
+   Violation between Board Outline Clearance(Outline Edge): (0.262mm < 0.3mm) Between Board Edge And Track (16.5mm,26.075mm)(16.5mm,34.675mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (0.262mm < 0.3mm) Between Board Edge And Track (16.5mm,34.675mm)(22.8mm,34.675mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (0.262mm < 0.3mm) Between Board Edge And Track (22.8mm,26.075mm)(22.8mm,34.675mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.3mm) Between Board Edge And Track (49.97mm,17.896mm)(51.02mm,17.896mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.3mm) Between Board Edge And Track (49.97mm,8.956mm)(51.02mm,8.956mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.3mm) Between Board Edge And Track (51.02mm,8.956mm)(51.02mm,17.896mm) on Top Overlay 
+Rule Violations :6
+
+Processing Rule : Room zasilanie (Bounding Region = (0mm, 0mm, 50.8mm, 13.328mm) (InComponentClass('zasilanie'))
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 19
+Waived Violations : 0
+Time Elapsed        : 00:00:01
