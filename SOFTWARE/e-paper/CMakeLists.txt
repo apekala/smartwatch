@@ -6,3 +6,11 @@ project(E-ink)
 target_sources(app PRIVATE src/main.c)
 target_sources(app PRIVATE src/epd1in54_V2.c)
 target_sources(app PRIVATE src/epdif.c)
+target_sources(app PRIVATE
+  src/epdpaint.c
+  src/font8.c
+  src/font12.c
+  src/font16.c
+  src/font20.c
+  src/font24.c
+)
