@@ -58,10 +58,6 @@ BT_CONN_CB_DEFINE(conn_callbacks) = {
 	.disconnected     = disconnected
 };
 
-static struct bt_conn_auth_cb conn_auth_callbacks;
-static struct bt_conn_auth_info_cb conn_auth_info_callbacks;
-
-
 int ble_init(void){
 	int blink_status = 0;
 	int err;
