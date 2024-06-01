@@ -15,3 +15,5 @@ target_sources(app PRIVATE src/accelerometer/accelerometer.c)
 target_sources(app PRIVATE src/accelerometer/bma4.c)
 target_sources(app PRIVATE src/accelerometer/bma456w.c)
 target_sources(app PRIVATE src/accelerometer/common.c)
+
+target_sources(app PRIVATE src/watch_controller/watch_controller.c)

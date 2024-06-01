@@ -19,19 +19,23 @@
 
 #include <zephyr/logging/log.h>
 
+#include "watch_controller/watch_controller.h"
+
 LOG_MODULE_DECLARE(BLE, LOG_LEVEL_DBG);
 
-static struct Notification new_notification = {
+struct Notification new_notification = {
     .title = NULL,
     .text = NULL
 };
 
 static void send_if_complete()
 {
-    if (*new_notification.title != NULL && *new_notification.text != NULL)
+    if (*new_notification.title !=  NULL && *new_notification.text != NULL)
     {
         // Send notification
-        LOG_DBG("Received notification with title: %s and text: %s", new_notification.title, new_notification.text);
+        LOG_DBG("Received notification: %s | %s", new_notification.title, new_notification.text);
+
+        watch_add_notification(new_notification);
 
         // Reset notification
         *new_notification.title = NULL;
@@ -56,6 +60,7 @@ static ssize_t write_title(struct bt_conn *conn, const struct bt_gatt_attr *attr
     }
 
     strcpy(new_notification.title, (char *)buf);
+    // strcpy(new_notification.title, "TitleTitle");
     send_if_complete();
 
     return len;
