@@ -16,14 +16,14 @@ struct Notification
     char text[NOTIFICATION_TEXT_LEN];
 };
 
-struct WatchState{
+struct WatchState
+{
     uint64_t current_time;
-    uint32_t step_count;        
+    uint32_t step_count;
     sys_slist_t notification_list;
 };
 
 extern struct WatchState watch_state;
-
 
 void watch_init();
 

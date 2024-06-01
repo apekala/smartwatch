@@ -25,12 +25,11 @@ LOG_MODULE_DECLARE(BLE, LOG_LEVEL_DBG);
 
 struct Notification new_notification = {
     .title = NULL,
-    .text = NULL
-};
+    .text = NULL};
 
 static void send_if_complete()
 {
-    if (*new_notification.title !=  NULL && *new_notification.text != NULL)
+    if (*new_notification.title != NULL && *new_notification.text != NULL)
     {
         // Send notification
         LOG_DBG("Received notification: %s | %s", new_notification.title, new_notification.text);

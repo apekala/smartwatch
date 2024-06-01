@@ -8,8 +8,6 @@
 
 LOG_MODULE_REGISTER(main, LOG_LEVEL_DBG);
 
-
-
 int main(void)
 {
     watch_init();
