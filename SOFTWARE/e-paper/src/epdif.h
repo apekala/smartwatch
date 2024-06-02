@@ -33,18 +33,9 @@
 #include <zephyr/types.h>
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/drivers/spi.h>
-#include <zephyr/logging/log.h>
-
-#define RES DT_ALIAS(respin) //res
-#define EPD_CS DT_ALIAS(cspin) //cs
-#define EPD_DC DT_ALIAS(dcpin) //dc
-#define EPD_BUSY DT_ALIAS(busypin) //busy
+#include <stdint.h>
 
 
-static struct gpio_dt_spec RST_PIN = GPIO_DT_SPEC_GET(RES, gpios);
-static struct gpio_dt_spec DC_PIN  = GPIO_DT_SPEC_GET(EPD_CS, gpios);
-static struct gpio_dt_spec CS_PIN  = GPIO_DT_SPEC_GET(EPD_DC, gpios);
-static struct gpio_dt_spec BUSY_PIN = GPIO_DT_SPEC_GET(EPD_BUSY, gpios);
 
 
 int  EpdIfInit(void);
@@ -52,8 +43,8 @@ void EpdIfDigitalWriteRST(int value);
 void EpdIfDigitalWriteDC(int value);
 void EpdIfDigitalWriteCS(int value);
 int  EpdIfDigitalRead();
-void DelayMs(unsigned int delaytime);
-void EpdIfSpiTransfer(unsigned char data);
+void DelayMs(int delaytime);
+void EpdIfSpiTransfer(uint8_t data);
 
 
 #endif /* EPDIF_H */

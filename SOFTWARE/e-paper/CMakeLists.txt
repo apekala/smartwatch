@@ -13,4 +13,5 @@ target_sources(app PRIVATE
   src/font16.c
   src/font20.c
   src/font24.c
+  src/imagedata.c
 )

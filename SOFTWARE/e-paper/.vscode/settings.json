@@ -1,7 +1,0 @@
-{
-    "C_Cpp.errorSquiggles": "disabled",
-    "files.associations": {
-        "kernel.h": "c",
-        "epd1in54_v2.h": "c"
-    }
-}

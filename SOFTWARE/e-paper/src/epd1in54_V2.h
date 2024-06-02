@@ -37,53 +37,51 @@
 #define EPD_WIDTH       200
 #define EPD_HEIGHT      200
 
-typedef struct {
-    unsigned long width;
-    unsigned long height;
-    unsigned int reset_pin;
-    unsigned int dc_pin;
-    unsigned int cs_pin;
-    unsigned int busy_pin;
-} Epd;
+// typedef struct {
+//      long width;
+//     unsigned long height;
+//     unsigned int reset_pin;
+//     unsigned int dc_pin;
+//     unsigned int cs_pin;
+//     unsigned int busy_pin;
+// } Epd;
 
-void EpdInit(Epd* epd);
-void EpdDestructor(Epd* epd);
+void EpdInit();
+void EpdDestructor();
 
-int EpdLDirInit(Epd* epd);
-int EpdHDirInit(Epd* epd);
-void EpdSendCommand(Epd* epd, unsigned char command);
-void EpdSendData(Epd* epd, unsigned char data);
-void EpdWaitUntilIdle(Epd* epd);
-void EpdReset(Epd* epd);
-void EpdClear(Epd* epd);
-void EpdDisplay(Epd* epd, const unsigned char* frame_buffer);
-void EpdDisplayPartBaseImage(Epd* epd, const unsigned char* frame_buffer);
-void EpdDisplayPartBaseWhiteImage(Epd* epd);
-void EpdDisplayPart(Epd* epd, const unsigned char* frame_buffer);
+int EpdLDirInit();
+int EpdHDirInit();
+void EpdSendCommand(uint8_t command);
+void EpdSendData(uint8_t data);
+void EpdWaitUntilIdle();
+void EpdReset();
+void EpdClear();
+void EpdDisplay(uint8_t* frame_buffer);
+void EpdDisplayPartBaseImage(uint8_t* frame_buffer);
+void EpdDisplayPartBaseWhiteImage();
+void EpdDisplayPart(uint8_t* frame_buffer);
 void EpdSetFrameMemory(
-        Epd* epd,
-        const unsigned char* image_buffer,
+        uint8_t* image_buffer,
         int x,
         int y,
         int image_width,
         int image_height
 );
 void EpdSetFrameMemoryPartial(
-        Epd* epd,
-        const unsigned char* image_buffer,
+        uint8_t* image_buffer,
         int x,
         int y,
         int image_width,
         int image_height
 );
-void EpdDisplayFrame(Epd* epd);
-void EpdDisplayPartFrame(Epd* epd);
-void EpdSleep(Epd* epd);
+void EpdDisplayFrame();
+void EpdDisplayPartFrame();
+void EpdSleep();
 
-void EpdLut(Epd* epd, unsigned char* lut);
-void EpdSetLut(Epd* epd, unsigned char* lut);
-void EpdSetMemoryArea(Epd* epd, int x_start, int y_start, int x_end, int y_end);
-void EpdSetMemoryPointer(Epd* epd, int x, int y);
+void EpdLut(uint8_t* lut);
+void EpdSetLut(uint8_t* lut);
+void EpdSetMemoryArea(int x_start, int y_start, int x_end, int y_end);
+void EpdSetMemoryPointer(int x, int y);
 
 #endif /* EPD1IN54_V2_H */
 
