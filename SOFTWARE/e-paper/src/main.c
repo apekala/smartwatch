@@ -21,9 +21,9 @@ int main(void)
         printk("After init\n");
         EpdClear();
         printk("e-Paper init and clear\n");
-        printk("e-Paper show pic\n");
         EpdHDirInit();
         EpdDisplayPartBaseImage(IMAGE_DATA);
+        printk("e-Paper show pic\n");
         EpdSleep();
         printk("sleep\n");
         return 0;

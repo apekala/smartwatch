@@ -72,7 +72,7 @@ epd_spi: &spi3 {
 	epd: epd@0 {
 		compatible = "bosch,bme280";
 		reg = <0>;
-		spi-max-frequency = <1000000>;
+		spi-max-frequency = <2000000>;
 	};
 };
 

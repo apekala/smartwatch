@@ -60,10 +60,10 @@ const struct spi_buf_set bptx = {
     .count = ARRAY_SIZE(bmp_tx_bufs)
 };
 
-// const struct spi_buf_set bprx = {
-//     .buffers = bmp_rx_bufs,
-//     .count = ARRAY_SIZE(bmp_rx_bufs)
-// };
+const struct spi_buf_set bprx = {
+    .buffers = bmp_rx_bufs,
+    .count = ARRAY_SIZE(bmp_rx_bufs)
+};
 
 // SPI device specification
 const struct spi_dt_spec spi_dev = SPI_DT_SPEC_GET(DT_NODELABEL(epd), SPI_EPD, 0);
@@ -93,7 +93,7 @@ int EpdIfInit(void) {
         printk("w init dc\n");
 		return -1;
 	}
-    ret = gpio_pin_configure_dt(&cs, GPIO_OUTPUT_INACTIVE);
+    ret = gpio_pin_configure_dt(&cs, GPIO_OUTPUT_ACTIVE);
     if (ret < 0) {
         printk("w init cs\n");
 		return - 1;
@@ -128,39 +128,12 @@ void DelayMs(int delaytime) {
 
 
 void EpdIfSpiTransfer(uint8_t data) {
-    // LOG_INF("Ready: %i", ready);
-
-    // unsigned char buffer[20] = { 0 };
-    // unsigned int length = sizeof(buffer);
-    uint8_t tx_buf[1] = { data };
-
-    struct spi_buf tx_bufs[] = {
-    {
-      .buf = tx_buf,
-      .len = sizeof(tx_buf)
-    }
-  };
-  struct spi_buf_set tx = {
-    .buffers = tx_bufs,
-    .count = ARRAY_SIZE(tx_bufs)
-  };
-
-    // const struct spi_buf tx_buffer = {
-    //     .buf = &data,
-    //     .len = 1
-    // };
-
-    // const struct spi_buf_set tx_buffers = {
-    //     .buffers = &tx_buffer,
-    //     .count = 1
-    // };
-
-    // int status = spi_write_dt(&spi_dev, &tx_buffers);
-    bmp_tx_bufs[0].buf = &data;
+    epd_wbuf[0] = data;
+    bmp_tx_bufs[0].buf = epd_wbuf;
+    bmp_rx_bufs[0].buf = epd_rbuf;
     bmp_tx_bufs[0].len = 1;
+    bmp_rx_bufs[0].len = 1;
     EpdIfDigitalWriteCS(0);
-    // spi_transceive_dt(&spi_dev, &bptx, NULL);
-    spi_write_dt(&spi_dev, &tx);
+    spi_transceive_dt(&spi_dev, &bptx, &bprx);
     EpdIfDigitalWriteCS(1);
-    // LOG_INF("Status: %i", status);
 }
