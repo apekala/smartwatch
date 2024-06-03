@@ -13,6 +13,7 @@ int main(void)
     // if (EpdIfInit() != 0) {
     //     return -1;
     // }
+    // printk("Hej");
     //     while(1){
     //             EpdIfSpiTransfer(0x55);
     //     }
@@ -20,10 +21,15 @@ int main(void)
         EpdLDirInit();
         printk("After init\n");
         EpdClear();
+        k_msleep(4000);
         printk("e-Paper init and clear\n");
         EpdHDirInit();
-        EpdDisplayPartBaseImage(IMAGE_DATA);
+        EpdDisplayPartBaseImage(papi);
         printk("e-Paper show pic\n");
+        k_msleep(4000);
+        EpdHDirInit();
+        // EpdClear();
+        // k_msleep(1000);
         EpdSleep();
         printk("sleep\n");
         return 0;

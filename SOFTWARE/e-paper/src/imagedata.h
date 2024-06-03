@@ -25,6 +25,7 @@
 #include <stdint.h>
 
 extern uint8_t IMAGE_DATA[];
+extern uint8_t papi[];
 
 /* FILE END */
 
