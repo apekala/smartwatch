@@ -20,7 +20,7 @@ struct WatchState watch_state = {
 void display_update()
 {
     LOG_WRN("Display update");
-    LOG_WRN("Current time: %u", watch_state.current_time);
+    LOG_WRN("Current time: %s", asctime(watch_state.current_time));
     LOG_WRN("Step count: %d", watch_state.step_count);
     struct NotificationNode *node;
     SYS_SLIST_FOR_EACH_CONTAINER(&watch_state.notification_list, node, node)
@@ -67,5 +67,11 @@ void watch_add_notification(struct Notification notification)
     sys_slist_prepend(&watch_state.notification_list, &notification_node->node);
     LOG_DBG("Notification added to list");
 
+    display_update();
+}
+
+void watch_update_current_time(struct tm *new_time)
+{
+    watch_state.current_time = new_time;
     display_update();
 }

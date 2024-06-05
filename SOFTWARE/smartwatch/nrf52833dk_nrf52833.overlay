@@ -39,3 +39,8 @@ bma_spi: &spi1 {
 		spi-max-frequency = < 8000000 >;
 	};
 };
+
+
+&rtc2 {
+	status = "okay";
+};
