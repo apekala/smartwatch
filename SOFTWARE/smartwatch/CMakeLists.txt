@@ -15,3 +15,12 @@ target_sources(app PRIVATE src/accelerometer/accelerometer.c)
 target_sources(app PRIVATE src/accelerometer/bma4.c)
 target_sources(app PRIVATE src/accelerometer/bma456w.c)
 target_sources(app PRIVATE src/accelerometer/common.c)
+
+target_sources(app PRIVATE src/watch_controller/watch_controller.c)
+target_sources(app PRIVATE src/RTC/rtc.c)
+
+if(CONFIG_BUILD_WITH_TFM)
+  target_include_directories(app PRIVATE
+    $<TARGET_PROPERTY:tfm,TFM_BINARY_DIR>/api_ns/interface/include
+  )
+endif()

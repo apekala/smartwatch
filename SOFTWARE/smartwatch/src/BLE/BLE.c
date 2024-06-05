@@ -95,9 +95,9 @@ int ble_init(void)
 
 	printk("Advertising successfully started\n");
 
-	for (;;)
-	{
-		dk_set_led(RUN_STATUS_LED, (++blink_status) % 2);
-		k_sleep(K_MSEC(RUN_LED_BLINK_INTERVAL));
-	}
+	// for (;;)
+	// {
+	// 	dk_set_led(RUN_STATUS_LED, (++blink_status) % 2);
+	// 	k_sleep(K_MSEC(RUN_LED_BLINK_INTERVAL));
+	// }
 }
