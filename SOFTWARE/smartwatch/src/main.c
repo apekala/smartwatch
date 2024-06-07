@@ -11,7 +11,7 @@ LOG_MODULE_REGISTER(main, LOG_LEVEL_DBG);
 
 int main(void)
 {
-    watch_init();
+    watch_init();   
     rtc_init();
     rtc_set_time(1717598679);
     accel_init();
