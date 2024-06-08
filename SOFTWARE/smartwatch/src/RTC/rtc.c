@@ -1,16 +1,15 @@
 #include "rtc.h"
 
+#include <watch_controller/watch_controller.h>
+#include <zephyr/drivers/counter.h>
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
-#include <zephyr/drivers/counter.h>
-
-#include <watch_controller/watch_controller.h>
 
 #define ALARM_CHANNEL_ID 0
 #define RTC_FREQ 32768
 // #define TIME_UPDATE_PERIOD_US 60 * 1000000 //1 minute
-#define TIME_UPDATE_PERIOD_S 10                              // 10s
-#define TIME_UPDATE_PERIOD_US TIME_UPDATE_PERIOD_S * 1000000 // 10s
+#define TIME_UPDATE_PERIOD_S 10                               // 10s
+#define TIME_UPDATE_PERIOD_US TIME_UPDATE_PERIOD_S * 1000000  // 10s
 
 LOG_MODULE_REGISTER(RTC, LOG_LEVEL_DBG);
 
@@ -31,24 +30,20 @@ static struct counter_alarm_cfg time_update_alarm_cfg = {
 
 static time_t epoch_offset = 0;
 
-static inline uint64_t ticks_to_seconds(uint32_t ticks)
-{
+static inline uint64_t ticks_to_seconds(uint32_t ticks) {
     return ticks / RTC_FREQ;
 }
 
-static inline uint32_t seconds_to_ticks(uint64_t seconds)
-{
+static inline uint32_t seconds_to_ticks(uint64_t seconds) {
     return seconds * RTC_FREQ;
 }
 
-static inline time_t ticks_to_epoch(uint32_t ticks)
-{
+static inline time_t ticks_to_epoch(uint32_t ticks) {
     return ticks_to_seconds(ticks) + epoch_offset;
 }
 
-void rtc_set_time(time_t new_time)
-{
-    LOG_INF("Setting time");
+void rtc_set_time(time_t new_time) {
+    LOG_INF("Setting time to %d", new_time);
     int err = 0;
 
     // update epoch offset
@@ -58,8 +53,7 @@ void rtc_set_time(time_t new_time)
 
     // reset alarm
     err = counter_cancel_channel_alarm(rtc, ALARM_CHANNEL_ID);
-    if (err)
-    {
+    if (err) {
         LOG_ERR("counter_cancel_channel_alarm error: %d", err);
     }
 
@@ -73,23 +67,20 @@ void rtc_set_time(time_t new_time)
 
 static void time_update_alarm_cb(const struct device *counter_dev,
                                  uint8_t chan_id, uint32_t ticks,
-                                 void *user_data)
-{
+                                 void *user_data) {
     int err;
 
     time_t time = ticks_to_epoch(ticks);
 
     // set next alarm
     time_update_alarm_cfg.ticks += counter_us_to_ticks(rtc, TIME_UPDATE_PERIOD_US);
-    if (time_update_alarm_cfg.ticks >= rtc_top_value)
-    {
+    if (time_update_alarm_cfg.ticks >= rtc_top_value) {
         epoch_offset += ticks_to_seconds(rtc_top_value);
         time_update_alarm_cfg.ticks %= (uint32_t)rtc_top_value;
     }
 
     err = counter_set_channel_alarm(rtc, ALARM_CHANNEL_ID, &time_update_alarm_cfg);
-    if (err)
-    {
+    if (err) {
         LOG_ERR("counter_set_channel_alarm error: %d", err);
         return;
     }
@@ -98,12 +89,10 @@ static void time_update_alarm_cb(const struct device *counter_dev,
     LOG_DBG("%d", ticks);
 }
 
-uint8_t rtc_init()
-{
+uint8_t rtc_init() {
     int err = 0;
 
-    if (!device_is_ready(rtc))
-    {
+    if (!device_is_ready(rtc)) {
         LOG_ERR("RTC not ready.\n");
         return 0;
     }
@@ -127,8 +116,7 @@ uint8_t rtc_init()
 
     // start counter
     err = counter_start(rtc);
-    if (err)
-    {
+    if (err) {
         LOG_ERR("counter_set_channel_alarm error: %d", err);
         return err;
     }

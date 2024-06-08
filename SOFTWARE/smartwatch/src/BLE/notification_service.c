@@ -87,8 +87,7 @@ static ssize_t write_text(struct bt_conn *conn, const struct bt_gatt_attr *attr,
     return len;
 }
 
-/* LED Button Service Declaration */
+
 BT_GATT_SERVICE_DEFINE(my_ns_svc, BT_GATT_PRIMARY_SERVICE(BT_UUID_NS),
-                       /* Create and add the Step Counter characteristic */
                        BT_GATT_CHARACTERISTIC(BT_UUID_NS_APP_TITLE, BT_GATT_CHRC_WRITE, BT_GATT_PERM_WRITE, NULL, write_title, NULL),
                        BT_GATT_CHARACTERISTIC(BT_UUID_NS_APP_TEXT, BT_GATT_CHRC_WRITE, BT_GATT_PERM_WRITE, NULL, write_text, NULL), );

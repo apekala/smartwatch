@@ -10,6 +10,7 @@ target_sources(app PRIVATE src/main.c)
 target_sources(app PRIVATE src/BLE/BLE.c)
 target_sources(app PRIVATE src/BLE/step_count_service.c)
 target_sources(app PRIVATE src/BLE/notification_service.c)
+target_sources(app PRIVATE src/BLE/time_sync_service.c)
 
 target_sources(app PRIVATE src/accelerometer/accelerometer.c)
 target_sources(app PRIVATE src/accelerometer/bma4.c)

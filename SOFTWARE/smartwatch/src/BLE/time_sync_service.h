@@ -1,0 +1,17 @@
+#ifndef NOTIFICATION_SERVICE_H
+#define NOTIFICATION_SERVICE_H
+
+#include <zephyr/types.h>
+
+// 0f7fe29d-4bda-4d30-803d-561fd52e18a6
+
+/** @brief Step Counter Service UUID. */
+#define BT_UUID_TSS_VAL BT_UUID_128_ENCODE(0x0f7fe290, 0x4bda, 0x4d30, 0x803d, 0x561fd52e18a6)
+
+/** @brief App name UUID. */
+#define BT_UUID_TSS_UNIX_TIME_VAL BT_UUID_128_ENCODE(0x0f7fe291, 0x4bda, 0x4d30, 0x803d, 0x561fd52e18a6)
+
+#define BT_UUID_TSS BT_UUID_DECLARE_128(BT_UUID_TSS_VAL)
+#define BT_UUID_TSS_UNIX_TIME BT_UUID_DECLARE_128(BT_UUID_TSS_UNIX_TIME_VAL)
+
+#endif  // NOTIFICATION_SERVICE_H
