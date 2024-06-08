@@ -9,19 +9,18 @@
 
 LOG_MODULE_REGISTER(main, LOG_LEVEL_DBG);
 
-
 int main(void)
 {
     watch_init();
     rtc_init();
-    rtc_set_time(1717598679);;
+    rtc_set_time(1717598679);
     accel_init();
     ble_init();
 
     LOG_INF("Initialization complete");
 
-
-    for(;;){
+    for (;;)
+    {
         k_sleep(K_FOREVER);
     }
 

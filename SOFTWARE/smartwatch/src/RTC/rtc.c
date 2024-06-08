@@ -9,7 +9,8 @@
 #define ALARM_CHANNEL_ID 0
 #define RTC_FREQ 32768
 // #define TIME_UPDATE_PERIOD_US 60 * 1000000 //1 minute
-#define TIME_UPDATE_PERIOD_US 10 * 1000000 // 10s
+#define TIME_UPDATE_PERIOD_S 10                              // 10s
+#define TIME_UPDATE_PERIOD_US TIME_UPDATE_PERIOD_S * 1000000 // 10s
 
 LOG_MODULE_REGISTER(RTC, LOG_LEVEL_DBG);
 
@@ -30,6 +31,21 @@ static struct counter_alarm_cfg time_update_alarm_cfg = {
 
 static time_t epoch_offset = 0;
 
+static inline uint64_t ticks_to_seconds(uint32_t ticks)
+{
+    return ticks / RTC_FREQ;
+}
+
+static inline uint32_t seconds_to_ticks(uint64_t seconds)
+{
+    return seconds * RTC_FREQ;
+}
+
+static inline time_t ticks_to_epoch(uint32_t ticks)
+{
+    return ticks_to_seconds(ticks) + epoch_offset;
+}
+
 void rtc_set_time(time_t new_time)
 {
     LOG_INF("Setting time");
@@ -38,7 +54,7 @@ void rtc_set_time(time_t new_time)
     // update epoch offset
     uint32_t ticks;
     counter_get_value(rtc, &ticks);
-    epoch_offset = new_time - ticks / RTC_FREQ;
+    epoch_offset = new_time - ticks_to_seconds(ticks);
 
     // reset alarm
     err = counter_cancel_channel_alarm(rtc, ALARM_CHANNEL_ID);
@@ -47,8 +63,11 @@ void rtc_set_time(time_t new_time)
         LOG_ERR("counter_cancel_channel_alarm error: %d", err);
     }
 
+    // calculate time for first alarm
+    time_t epoch = ticks_to_epoch(ticks);
+
     // set first alarm
-    time_update_alarm_cfg.ticks = ticks;
+    time_update_alarm_cfg.ticks = ticks - seconds_to_ticks(epoch % TIME_UPDATE_PERIOD_S);
     time_update_alarm_cb(rtc, ALARM_CHANNEL_ID, ticks, NULL);
 }
 
@@ -58,13 +77,13 @@ static void time_update_alarm_cb(const struct device *counter_dev,
 {
     int err;
 
-    time_t time = ticks / RTC_FREQ + epoch_offset;
+    time_t time = ticks_to_epoch(ticks);
 
     // set next alarm
     time_update_alarm_cfg.ticks += counter_us_to_ticks(rtc, TIME_UPDATE_PERIOD_US);
     if (time_update_alarm_cfg.ticks >= rtc_top_value)
     {
-        epoch_offset += rtc_top_value / RTC_FREQ;
+        epoch_offset += ticks_to_seconds(rtc_top_value);
         time_update_alarm_cfg.ticks %= (uint32_t)rtc_top_value;
     }
 
