@@ -14,9 +14,6 @@
 #include <zephyr/bluetooth/uuid.h>
 #include <zephyr/bluetooth/gatt.h>
 
-#include <zephyr/bluetooth/uuid.h>
-#include <zephyr/bluetooth/gatt.h>
-
 #include <zephyr/logging/log.h>
 
 #include "accelerometer/accelerometer.h"
@@ -24,7 +21,6 @@
 
 LOG_MODULE_DECLARE(BLE, LOG_LEVEL_DBG);
 
-// static uint32_t step_count;
 
 static ssize_t read_step_count(struct bt_conn *conn, const struct bt_gatt_attr *attr, void *buf, uint16_t len, uint16_t offset)
 {
