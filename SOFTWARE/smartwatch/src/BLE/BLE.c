@@ -59,7 +59,6 @@ BT_CONN_CB_DEFINE(conn_callbacks) = {
 
 int ble_init(void)
 {
-	int blink_status = 0;
 	int err;
 
 	printk("Starting Bluetooth Peripheral LBS example\n");
@@ -94,10 +93,5 @@ int ble_init(void)
 	}
 
 	printk("Advertising successfully started\n");
-
-	// for (;;)
-	// {
-	// 	dk_set_led(RUN_STATUS_LED, (++blink_status) % 2);
-	// 	k_sleep(K_MSEC(RUN_LED_BLINK_INTERVAL));
-	// }
+	return 0;
 }

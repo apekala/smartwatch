@@ -5,7 +5,7 @@
 
 LOG_MODULE_REGISTER(watch_controller, LOG_LEVEL_DBG);
 
-static struct NotificationNode
+struct NotificationNode
 {
     sys_snode_t node;
     struct Notification data;
@@ -13,7 +13,7 @@ static struct NotificationNode
 
 struct WatchState watch_state = {
     .current_time = 0,
-    .step_count = 0,
+    .step_count = 0
 };
 
 // temporary function, to be replaced with actual display update

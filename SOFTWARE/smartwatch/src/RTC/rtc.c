@@ -21,8 +21,8 @@ static void time_update_alarm_cb(const struct device *counter_dev,
                                  uint8_t chan_id, uint32_t ticks,
                                  void *user_data);
 
-static struct counter_top_cfg top_cfg = {
-    .flags = COUNTER_TOP_CFG_RESET_WHEN_LATE};
+// static struct counter_top_cfg top_cfg = {
+//     .flags = COUNTER_TOP_CFG_RESET_WHEN_LATE};
 
 static struct counter_alarm_cfg time_update_alarm_cfg = {
     .callback = time_update_alarm_cb,
@@ -43,7 +43,7 @@ static inline time_t ticks_to_epoch(uint32_t ticks) {
 }
 
 void rtc_set_time(time_t new_time) {
-    LOG_INF("Setting time to %d", new_time);
+    LOG_INF("Setting time to %lld", new_time);
     int err = 0;
 
     // update epoch offset

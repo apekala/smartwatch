@@ -13,7 +13,6 @@ int main(void)
 {
     watch_init();   
     rtc_init();
-    rtc_set_time(1717598679);
     accel_init();
     ble_init();
 

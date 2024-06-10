@@ -22,15 +22,15 @@ struct Notification new_notification = {0};
 
 static void send_if_complete() {
     LOG_DBG("Received notification: %x | %x", *new_notification.title, *new_notification.text);
-    if (*new_notification.title != NULL && *new_notification.text != NULL) {
+    if (*new_notification.title != '\0' && *new_notification.text != '\0') {
         // Send notification
         LOG_DBG("Received notification: %s | %s", new_notification.title, new_notification.text);
 
         watch_add_notification(new_notification);
 
         // Reset notification
-        *new_notification.title = NULL;
-        *new_notification.text = NULL;
+        *new_notification.title = '\0';
+        *new_notification.text = '\0';
     }
 }
 

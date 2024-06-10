@@ -22,7 +22,7 @@ static ssize_t write_time(struct bt_conn *conn, const struct bt_gatt_attr *attr,
     LOG_DBG("Attribute write, handle: %u, conn: %p", attr->handle, (void *)conn);
 
     // change to 64
-    int32_t *new_epoch = buf;
+    const int32_t *new_epoch = buf;
 
     if (len > sizeof(new_epoch)) {
         LOG_ERR("Write time: Incorrect data length");
