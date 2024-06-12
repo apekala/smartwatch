@@ -5,7 +5,6 @@
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 
-#define ALARM_CHANNEL_ID 0
 #define RTC_FREQ 32768
 // #define TIME_UPDATE_PERIOD_US 60 * 1000000 //1 minute
 #define TIME_UPDATE_PERIOD_S 10                               // 10s
@@ -38,6 +37,10 @@ static inline uint32_t seconds_to_ticks(uint64_t seconds) {
     return seconds * RTC_FREQ;
 }
 
+static inline uint32_t milliseconds_to_ticks(uint64_t seconds) {
+    return seconds * RTC_FREQ / 1000;
+}
+
 static inline time_t ticks_to_epoch(uint32_t ticks) {
     return ticks_to_seconds(ticks) + epoch_offset;
 }
@@ -52,7 +55,7 @@ void rtc_set_time(time_t new_time) {
     epoch_offset = new_time - ticks_to_seconds(ticks);
 
     // reset alarm
-    err = counter_cancel_channel_alarm(rtc, ALARM_CHANNEL_ID);
+    err = counter_cancel_channel_alarm(rtc, RTC_CHANNEL);
     if (err) {
         LOG_ERR("counter_cancel_channel_alarm error: %d", err);
     }
@@ -62,7 +65,7 @@ void rtc_set_time(time_t new_time) {
 
     // set first alarm
     time_update_alarm_cfg.ticks = ticks - seconds_to_ticks(epoch % TIME_UPDATE_PERIOD_S);
-    time_update_alarm_cb(rtc, ALARM_CHANNEL_ID, ticks, NULL);
+    time_update_alarm_cb(rtc, RTC_CHANNEL, ticks, NULL);
 }
 
 static void time_update_alarm_cb(const struct device *counter_dev,
@@ -79,7 +82,7 @@ static void time_update_alarm_cb(const struct device *counter_dev,
         time_update_alarm_cfg.ticks %= (uint32_t)rtc_top_value;
     }
 
-    err = counter_set_channel_alarm(rtc, ALARM_CHANNEL_ID, &time_update_alarm_cfg);
+    err = counter_set_channel_alarm(rtc, RTC_CHANNEL, &time_update_alarm_cfg);
     if (err) {
         LOG_ERR("counter_set_channel_alarm error: %d", err);
         return;
@@ -112,7 +115,7 @@ uint8_t rtc_init() {
 
     // set first alarm
     time_update_alarm_cfg.ticks = 0;
-    time_update_alarm_cb(rtc, ALARM_CHANNEL_ID, 0, NULL);
+    time_update_alarm_cb(rtc, RTC_CHANNEL, 0, NULL);
 
     // start counter
     err = counter_start(rtc);
