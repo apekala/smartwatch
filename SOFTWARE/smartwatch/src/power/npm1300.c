@@ -1,6 +1,7 @@
 #include "npm1300.h"
 
-
+#include <zephyr/device.h>
+#include <zephyr/devicetree.h>
 #include "power/npm1300func.h"
 
 LOG_MODULE_REGISTER(NMP1300, LOG_LEVEL_DBG);
@@ -30,13 +31,15 @@ void npm_init(){
 
 void vibration_start(){
     uint8_t status = npm_i2c_write_reg(NPM1300_Dev, TASKLDSWSET, 1);
+    k_msleep(10);
     if(status){
-        LOG_ERR("LDSW set error");
+        LOG_ERR("LDSW set error %d", status);
     }
 }
 
 void vibration_stop(){
     uint8_t status = npm_i2c_write_reg(NPM1300_Dev, TASKLDSWCLR, 1);
+    k_msleep(10);
     if(status){
         LOG_ERR("LDSW clr error");
     }

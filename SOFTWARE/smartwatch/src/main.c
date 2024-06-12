@@ -13,9 +13,10 @@
 #include "RTC/rtc.h"
 #include "power/npm1300.h"
 #include "UI/vibration.h"
+#include "UI/buttons.h"
 
 #define LED0_NODE	DT_ALIAS(led0)
-static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
+extern const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 
 LOG_MODULE_REGISTER(main, LOG_LEVEL_DBG);
 
@@ -33,14 +34,6 @@ int main(void)
     gpio_pin_set_dt(&led, 1);
 
     npm_init();
-
-    // vibration_start();
-    // k_msleep(1000);
-    // vibration_stop();
-    // k_msleep(1000);
-    //     vibration_start();
-    // k_msleep(1000);
-    // vibration_stop();
     k_msleep(1000);
     ui_vibration_init();
     
@@ -55,7 +48,8 @@ int main(void)
     rtc_init();
     accel_init();
     ble_init();
-
+    
+    buttons_init();
 
     // ui_vibrate(1000);
 

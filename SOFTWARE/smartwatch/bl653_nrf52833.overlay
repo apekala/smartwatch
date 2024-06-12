@@ -115,5 +115,3 @@ uart0_sleep: &uart0_sleep {
 		bias-pull-up;
 	};
 };
-
-

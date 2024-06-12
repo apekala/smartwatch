@@ -28,6 +28,7 @@ target_sources(app PRIVATE src/power/npm1300func.c)
 target_sources(app PRIVATE src/power/npm1300.c)
 
 target_sources(app PRIVATE src/UI/vibration.c)
+target_sources(app PRIVATE src/UI/buttons.c)
 
 
 
