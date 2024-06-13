@@ -15,6 +15,7 @@ import 'package:pbl4/utils/extra.dart';
 import 'package:pbl4/utils/functions_enum.dart';
 import 'package:pbl4/utils/get_ble_charecteristic.dart';
 import 'package:pbl4/utils/snackbar.dart';
+import 'package:remove_diacritic/remove_diacritic.dart';
 
 class NotificationPage extends StatefulWidget {
   final BluetoothDevice device;
@@ -102,6 +103,7 @@ class _NotificationPageState extends State<NotificationPage> {
       trimText.add('...');
       text = trimText.join('');
     }
+    text =  removeDiacritics(notify);
     BluetoothCharacteristic textUUID = getBluetoothCharacteristic(
         widget.device.remoteId,
         ServiceEnum.notification,
@@ -123,6 +125,7 @@ class _NotificationPageState extends State<NotificationPage> {
         widget.device.remoteId,
         ServiceEnum.notification,
         Characteristic.notificationTitle);
+    title =  removeDiacritics(title);
     final dataTitle =
         utf8.encode(title).map((e) => e.toRadixString(16)).toList();
     dataTitle.add('00');
