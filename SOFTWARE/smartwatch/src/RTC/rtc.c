@@ -6,8 +6,8 @@
 #include <zephyr/logging/log.h>
 
 #define RTC_FREQ 32768
-// #define TIME_UPDATE_PERIOD_US 60 * 1000000 //1 minute
-#define TIME_UPDATE_PERIOD_S 10                               // 10s
+#define TIME_UPDATE_PERIOD_S 60 //1 minute
+// #define TIME_UPDATE_PERIOD_S 10                               // 10s
 #define TIME_UPDATE_PERIOD_US TIME_UPDATE_PERIOD_S * 1000000  // 10s
 
 LOG_MODULE_REGISTER(RTC, LOG_LEVEL_DBG);
@@ -88,12 +88,15 @@ static void time_update_alarm_cb(const struct device *counter_dev,
         return;
     }
 
+    LOG_DBG("updating time");
     watch_update_current_time(localtime(&time));
     LOG_DBG("%d", ticks);
 }
 
 uint8_t rtc_init() {
     int err = 0;
+
+    epoch_offset = 0;
 
     if (!device_is_ready(rtc)) {
         LOG_ERR("RTC not ready.\n");

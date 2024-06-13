@@ -13,7 +13,16 @@
 #include "RTC/rtc.h"
 #include "power/npm1300.h"
 #include "UI/vibration.h"
-#include "UI/buttons.h"
+#include "UI/ui_controller.h"
+#include "UI/display.h"
+
+
+#define DISPLAY_STACK_SIZE 8096
+#define DISPLAY_THREAD_PRIORITY 5
+
+K_THREAD_STACK_DEFINE(display_stack_area, DISPLAY_STACK_SIZE);
+struct k_thread display_thread_data;
+
 
 #define LED0_NODE	DT_ALIAS(led0)
 extern const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
@@ -44,16 +53,33 @@ int main(void)
     ui_vibrate(1000);
     LOG_INF("vibrate2");
 
+
+    
     watch_init();   
     rtc_init();
+    // rtc_set_time(1718206155);
     accel_init();
     ble_init();
+
+    k_tid_t my_tid = k_thread_create(&display_thread_data, display_stack_area,
+                                K_THREAD_STACK_SIZEOF(display_stack_area),
+                                ui_screen_refresh_thread,
+                                NULL, NULL, NULL,
+                                DISPLAY_THREAD_PRIORITY, 0, K_NO_WAIT);
+
+
+
     
     buttons_init();
+
+    watch_display_update();
+
 
     // ui_vibrate(1000);
 
     LOG_INF("Initialization complete");
+
+
 
     // k_sleep(K_FOREVER);
     for(;;){

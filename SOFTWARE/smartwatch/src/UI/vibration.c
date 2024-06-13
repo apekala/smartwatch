@@ -17,14 +17,12 @@ LOG_MODULE_REGISTER(vibration, LOG_LEVEL_DBG);
 
 
 static void vibration_stop_cb(struct k_work *item){
-    LOG_ERR("stop brrrrr");
     vibration_stop();
 }
 
 struct k_work_delayable vibration_stop_work;
 
 static void vibration_start_cb(struct k_work *item){
-    LOG_ERR("start brrrrr");
     vibration_start();
 }
 
