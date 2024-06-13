@@ -1,0 +1,964 @@
+﻿STEP to UG
+! INFO-     NX STEP AP214 - V2007
+! INFO-      
+! INFO-     Start of Translation: 23-MAY-2024  7:41:43 PM
+! INFO-      
+! STATUS-   Converting Part: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\smartwatch.step
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      Open CASCADE Model
+! SUMMARY-  Imp_Level        2;1
+! SUMMARY-  File_Name        Open CASCADE Shape Model
+! SUMMARY-  Date             2024-05-23T19:40:44
+! SUMMARY-  Author           Author
+! SUMMARY-  Organization     Open CASCADE
+! SUMMARY-  Pre_Version      Open CASCADE STEP processor 7.5
+! SUMMARY-  Orig_System      Open CASCADE 7.5
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-  Schema_ID        automotive_design
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  advanced_brep_shape_representation .........................:     12
+! SUMMARY-  advanced_face ..............................................:    676
+! SUMMARY-  application_context ........................................:      1
+! SUMMARY-  axis2_placement_3d .........................................:    991
+! SUMMARY-  b_spline_curve_with_knots ..................................:    115
+! SUMMARY-  b_spline_curve_with_knots_and_rational_b_spline_curve ......:     16
+! SUMMARY-  b_spline_surface_with_knots ................................:     56
+! SUMMARY-  b_spline_surface_with_knots_and_rational_b_spline_surface ..:      8
+! SUMMARY-  cartesian_point ............................................:   4245
+! SUMMARY-  circle .....................................................:    194
+! SUMMARY-  closed_shell ...............................................:     72
+! SUMMARY-  context_dependent_shape_representation .....................:    184
+! SUMMARY-  cylindrical_surface ........................................:    101
+! SUMMARY-  direction ..................................................:   3156
+! SUMMARY-  edge_curve .................................................:   1499
+! SUMMARY-  edge_loop ..................................................:    747
+! SUMMARY-  face_bound .................................................:    747
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:     88
+! SUMMARY-  item_defined_transformation ................................:    184
+! SUMMARY-  length_unit_and_si_unit ....................................:     88
+! SUMMARY-  line .......................................................:   1174
+! SUMMARY-  manifold_solid_brep ........................................:     72
+! SUMMARY-  next_assembly_usage_occurrence .............................:    184
+! SUMMARY-  oriented_edge ..............................................:   2998
+! SUMMARY-  plane ......................................................:    491
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:     88
+! SUMMARY-  product ....................................................:     88
+! SUMMARY-  product_context ............................................:     88
+! SUMMARY-  product_definition .........................................:     88
+! SUMMARY-  product_definition_context .................................:     88
+! SUMMARY-  product_definition_formation ...............................:     88
+! SUMMARY-  product_definition_shape ...................................:    272
+! SUMMARY-  product_related_product_category ...........................:     88
+! SUMMARY-  representation_relationship_with_transformation_and_shape ..:    184
+! SUMMARY-  shape_representation .......................................:     76
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:     88
+! SUMMARY-  spherical_surface ..........................................:     12
+! SUMMARY-  toroidal_surface ...........................................:      8
+! SUMMARY-  uncertainty_measure_with_unit ..............................:     88
+! SUMMARY-  vector .....................................................:   1174
+! SUMMARY-  vertex_point ...............................................:    970
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                          21587
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 23-MAY-2024 7:41:43 PM
+! STATUS-    
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:44 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\Extruded21416
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\Extruded21074
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\Pins19765
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     2
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              2
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\Body19596
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\Pins
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     2
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              2
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\Body19030
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\User Library-INDC1608X___
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     3
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              3
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\BOSCH logo
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     8
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              8
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\3
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:    13
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             13
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\Extruded
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\PinsArrayTB
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:    16
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             16
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\PinsArrayLR
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:    16
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             16
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\ThermalPin
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\Body
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\User Library-cap_0402
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\User Library-res0402-1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:47 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\Open CASCADE STEP translator 7.5 1.1.1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\6263220400
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\6263222960
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\_1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:    48
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             48
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C22
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C23
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C24
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C25
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C26
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C27
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C28
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C29
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C30
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C31
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C32
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C33
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C13
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C14
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C15
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C16
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C17
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C18
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C19
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C20
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C5
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C3
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C6
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C8
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C21
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\6132892112
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     2
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              2
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\D1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\6132898752
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     2
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              2
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\D2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\D3
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\L1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\L2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:48 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R17
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R18
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R11
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R12
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R13
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R14
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R15
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R16
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R10
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R5
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\IC_Bosch_Sensortec_BMA456_eec
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     4
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              4
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\U1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C11
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R4
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R7
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R9
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\6263223120
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\J1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C12
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\6132891472
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     4
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              4
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\IC1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C4
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C7
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C9
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\C10
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R2
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R1
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R6
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R8
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\R3
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\Board
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 23-MAY-2024  7:41:49 PM
+! INFO-     Filing Part ..: D:\franz\Documents\studia\eity\PBL4\smartwatch2\smartwatch\MODEL\smartwatch_step.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:    61
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             61
+! INFO-      
+! INFO-     Total number of solids input for this translation       :        72
+! INFO-      
+! INFO-     Number of solids created without body validation faults :        72
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :         0
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :         0
+! INFO-      
+! INFO-     End of Translation: 23-MAY-2024  7:41:49 PM
+! INFO-      
