@@ -17,11 +17,13 @@
 #include "UI/display.h"
 
 
-#define DISPLAY_STACK_SIZE 8096
+#define DISPLAY_STACK_SIZE 16384
 #define DISPLAY_THREAD_PRIORITY 5
 
 K_THREAD_STACK_DEFINE(display_stack_area, DISPLAY_STACK_SIZE);
 struct k_thread display_thread_data;
+
+
 
 
 #define LED0_NODE	DT_ALIAS(led0)
@@ -47,17 +49,9 @@ int main(void)
     ui_vibration_init();
     
     ui_vibrate(1000);
-    // k_msleep(10);
-    LOG_INF("vibrate1");
-    k_msleep(500);
-    ui_vibrate(1000);
-    LOG_INF("vibrate2");
-
-
     
     watch_init();   
     rtc_init();
-    // rtc_set_time(1718206155);
     accel_init();
     ble_init();
 
@@ -68,20 +62,12 @@ int main(void)
                                 DISPLAY_THREAD_PRIORITY, 0, K_NO_WAIT);
 
 
-
-    
-    buttons_init();
+    ui_init();
 
     watch_display_update();
 
-
-    // ui_vibrate(1000);
-
     LOG_INF("Initialization complete");
 
-
-
-    // k_sleep(K_FOREVER);
     for(;;){
         gpio_pin_toggle_dt(&led);
         k_msleep(100);

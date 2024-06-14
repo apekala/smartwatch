@@ -39,10 +39,13 @@ struct WatchState
     uint8_t notification_count;
 
     //display
+    bool refresh_in_progress;
     uint8_t current_screen_number; // 0 for main, n>0 for n-th notification
 };
 
 extern struct WatchState watch_state;
+
+
 
 void watch_init();
 

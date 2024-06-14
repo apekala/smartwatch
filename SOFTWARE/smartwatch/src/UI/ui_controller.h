@@ -1,7 +1,9 @@
 #ifndef UI_CONTROLLER_H
 #define UI_CONTROLLER_H
 
-int buttons_init();
+void schedule_main_screen_return();
+
+void ui_init();
 
 
 #endif // UI_CONTROLLER_H

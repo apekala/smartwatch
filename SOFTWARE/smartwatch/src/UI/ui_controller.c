@@ -21,6 +21,15 @@ static const struct gpio_dt_spec button3 = GPIO_DT_SPEC_GET(SW3_NODE, gpios);
 
 LOG_MODULE_REGISTER(ui_controller, LOG_LEVEL_DBG);
 
+struct k_work_delayable main_screen_return_work;
+
+void schedule_main_screen_return(){
+    int res = k_work_reschedule(&main_screen_return_work, K_MSEC(10000));
+    if(res<0){
+        LOG_ERR("brrr stop work reschedule error: %d", res);
+    }
+}
+
 void button_delete_pressed(const struct device *dev, struct gpio_callback *cb, gpio_port_pins_t pins) {
     LOG_INF("button delete pressed");
     ui_vibrate(200);
@@ -37,6 +46,7 @@ void button_up_pressed(const struct device *dev, struct gpio_callback *cb, gpio_
 
     if(watch_state.current_screen_number >= 1){
         watch_state.current_screen_number--;
+        schedule_main_screen_return();
         ui_request_refresh();
     }
 }
@@ -47,6 +57,7 @@ void button_down_pressed(const struct device *dev, struct gpio_callback *cb, gpi
     
     if(watch_state.current_screen_number<watch_state.notification_count){
         watch_state.current_screen_number++;
+        schedule_main_screen_return();
         ui_request_refresh();
     }
 }
@@ -56,10 +67,20 @@ static struct gpio_callback button1_cb_data;
 static struct gpio_callback button2_cb_data;
 static struct gpio_callback button3_cb_data;
 
-int buttons_init() {
+
+
+
+static void main_screen_return_cb(struct k_work *item){
+    if(watch_state.current_screen_number){
+        watch_state.current_screen_number = 0;
+        ui_request_refresh();
+    }
+}
+
+void ui_init() {
     if (!device_is_ready(button0.port) && !device_is_ready(button1.port) && !device_is_ready(button2.port) && !device_is_ready(button3.port)) {
         LOG_ERR("button not ready error");
-        return -1;
+        return;
     }
     int ret = gpio_pin_configure_dt(&button0, GPIO_INPUT);
     ret |= gpio_pin_configure_dt(&button1, GPIO_INPUT);
@@ -67,14 +88,14 @@ int buttons_init() {
     ret |= gpio_pin_configure_dt(&button3, GPIO_INPUT);
     if (ret < 0) {
         LOG_ERR("button initialization error");
-        return -1;
+        return;
     }
     ret = gpio_pin_interrupt_configure_dt(&button0, GPIO_INT_EDGE_TO_ACTIVE);
     ret |= gpio_pin_interrupt_configure_dt(&button1, GPIO_INT_EDGE_TO_ACTIVE);
     ret |= gpio_pin_interrupt_configure_dt(&button2, GPIO_INT_EDGE_TO_ACTIVE);
     ret |= gpio_pin_interrupt_configure_dt(&button3, GPIO_INT_EDGE_TO_ACTIVE);
     if (ret < 0) {
-        return -1;
+        return;
     }
 
     gpio_init_callback(&button0_cb_data, button_delete_pressed, BIT(button0.pin));
@@ -88,8 +109,10 @@ int buttons_init() {
     ret |= gpio_add_callback(button3.port, &button3_cb_data);
     if (ret < 0) {
         LOG_ERR("button add calback error");
-        return -1;
+        return;
     }
 
-    LOG_INF("Buttons initialized");
+    k_work_init_delayable(&main_screen_return_work, main_screen_return_cb);
+
+    LOG_INF("UI initialized");
 }

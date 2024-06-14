@@ -112,9 +112,9 @@ void epd_send_data(uint8_t data)
  */
 void epd_wait_until_idle()
 {
-    // while(EpdIfDigitalRead() == 1) {      //LOW: idle, HIGH: busy
-    //     DelayMs(100);
-    // }
+    while(epdIf_digital_read() == 1) {      //LOW: idle, HIGH: busy
+        delay_ms(100);
+    }
     delay_ms(200);
 }
 

@@ -55,15 +55,50 @@ static void draw_notification_screen(struct Notification* notification) {
     paint_set_rotate(&paint, 90);
 
     paint_draw_string_at(&paint, 0, 0, notification->title, &Font24);
-    paint_draw_string_at(&paint, 0, 30, notification->text, &Font16);
+
+    // line wrap
+    const uint8_t line_width = 200 / 11;
+    const uint8_t max_lines = 170 / 16;
+    // uint16_t index = 0;
+    uint8_t line = 0;
+    char line_buff[line_width+1];
+
+    char *section_start = notification->text;
+    char *section_end = notification->text;
+    while (section_end < &notification->text[strlen(notification->text)] && line < max_lines){
+        //find next space
+        char *next_space = strchr(section_start, ' ');
+        
+        //check if line is too long, or there are no spaces left in the string
+        if(next_space == NULL || next_space - section_start >= line_width ){
+            section_end = section_start + line_width;
+        }else{
+            do{
+                section_end = next_space;
+                next_space=strchr(next_space+1, ' ');
+            }while(next_space!=NULL && next_space - section_start <= line_width);
+        }
+        
+        // copy string to a buffer
+        strncpy(line_buff, section_start, section_end-section_start);
+        line_buff[section_end-section_start]='\0';
+        LOG_DBG("printing '%s'", line_buff);
+        paint_draw_string_at(&paint, 0, 30 + 16*line, line_buff, &Font16);
+        section_start = section_end+1;
+        line++;
+        LOG_WRN("start: %d, end: %d", section_start, section_end);
+    }
+    
 
     epd_set_frame_memory(paint_get_image(&paint), 0, 0, paint_get_width(&paint), paint_get_height(&paint));
 }
 
 void display_screen() {
+    watch_state.refresh_in_progress = true;
+
     epd_LDirInit();
 
-    if(watch_state.current_screen_number==0){
+    if (watch_state.current_screen_number == 0) {
         LOG_INF("displaying main screen");
 
         accel_read_step_count(&watch_state.step_count);
@@ -71,20 +106,21 @@ void display_screen() {
         LOG_DBG("Current time: %s", asctime(watch_state.current_time));
         LOG_DBG("Step count: %d", watch_state.step_count);
         LOG_DBG("Notification count: %d", watch_state.notification_count);
-        struct NotificationNode *node;
-        SYS_SLIST_FOR_EACH_CONTAINER(&watch_state.notification_list, node, node){
+        struct NotificationNode* node;
+        SYS_SLIST_FOR_EACH_CONTAINER(&watch_state.notification_list, node, node) {
             LOG_DBG("Notification: %s | %s", node->data.title, node->data.text);
         }
         draw_main_screen();
-    }else{
-        struct Notification notification = find_notification(watch_state.current_screen_number);
-        LOG_INF("Diplaying notification number %d: %s | %s", watch_state.current_screen_number, notification.text, notification.title);
+    } else {
+        struct Notification notification = find_notification(watch_state.current_screen_number-1);
+        LOG_INF("Diplaying notification number %d: %s | %s", watch_state.current_screen_number-1, notification.title, notification.text);
         draw_notification_screen(&notification);
     }
 
     epd_display_frame();
-    k_msleep(4000);
+    epd_wait_until_idle();
     epd_sleep();
+    watch_state.refresh_in_progress = false;
 }
 
 struct k_event refresh_event;
@@ -99,6 +135,5 @@ void ui_screen_refresh_thread() {
         k_event_wait(&refresh_event, SCREEN_REFRESH_EVENT, false, K_FOREVER);
         k_event_set(&refresh_event, 0);
         display_screen();
-        k_msleep(1000);
     }
 }

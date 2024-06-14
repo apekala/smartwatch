@@ -126,13 +126,13 @@ void delay_ms(int delaytime) {
     k_msleep(delaytime);
 }
 
-
 void epdIf_spi_transfer(uint8_t data) {
     epd_wbuf[0] = data;
     epd_tx_bufs[0].buf = epd_wbuf;
     epd_rx_bufs[0].buf = epd_rbuf;
     epd_tx_bufs[0].len = 1;
     epd_rx_bufs[0].len = 1;
+
     epdIf_digital_write_CS(0);
     spi_transceive_dt(&spi_dev, &epd_bptx, &epd_bprx);
     epdIf_digital_write_CS(1);

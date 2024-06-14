@@ -103,15 +103,6 @@ uint8_t rtc_init() {
         return 0;
     }
 
-    // set top
-    //  top_cfg.ticks = RTC_FREQ* 12;
-    //  err = counter_set_top_value(rtc, &top_cfg);
-    //  if (err)
-    //  {
-    //      LOG_ERR("counter_set_top_value error: %d", err);
-    //      return err;
-    //  }
-
     // get top value
     rtc_top_value = counter_get_top_value(rtc);
     LOG_DBG("read top value: %d", rtc_top_value);

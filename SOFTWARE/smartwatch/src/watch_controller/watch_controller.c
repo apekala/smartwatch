@@ -5,6 +5,7 @@
 
 #include "UI/display.h"
 #include "accelerometer/accelerometer.h"
+#include "UI/ui_controller.h"
 
 LOG_MODULE_REGISTER(watch_controller, LOG_LEVEL_DBG);
 
@@ -13,6 +14,7 @@ struct WatchState watch_state = {
     .current_time = 0,
     .step_count = 0,
     .notification_count = 0,
+    .refresh_in_progress=false,
     .current_screen_number = 0
 };
 
@@ -60,6 +62,10 @@ void watch_add_notification(struct Notification notification)
     watch_state.notification_count++;
     LOG_DBG("Notification added to list");
 
+    watch_state.current_screen_number = 1;
+    ui_vibrate(100);
+    // schedule_main_screen_return();
+    k_msleep(10);
     watch_display_update();
 }
 
@@ -75,55 +81,10 @@ struct Notification find_notification(uint8_t n) {
     }
 }
 
-
-// void watch_first_notification(){
-//     struct NotificationNode *next_node;
-//     watch_state.current_notification_node = SYS_DLIST_CONTAINER(sys_dlist_peek_head(&watch_state.notification_list), next_node, node);
-//     LOG_INF("FROM LIST: %s", watch_state.current_notification_node->data.title);
-// }
-
-// void watch_next_notification(){
-//     struct NotificationNode *next_node;
-
-//     if(watch_state.current_screen_number < watch_state.notification_count){
-//     watch_state.current_notification_node = SYS_DLIST_PEEK_NEXT_CONTAINER(&watch_state.notification_list, watch_state.current_notification_node, node);
-//     }
-// }
-
-// void watch_previous_notification(){
-//     // struct NotificationNode *next_node;
-//     // sys_dnode_t *prev_node_ptr = sys_dlist_peek_prev(&watch_state.notification_list, &watch_state.current_notification_node->node);
-    
-//     // if (prev_node_ptr != NULL) {
-//     //     watch_state.current_notification_node = SYS_DLIST_CONTAINER(prev_node_ptr, next_node, node);
-//     //     // watch_state.current_notification_node = CONTAINER_OF(prev_node_ptr, struct NotificationNode, node);
-//     // } else {
-//     //     LOG_ERR("No previous node found (current node is head or not in the list)\n");
-//     // }
-
-//     if (watch_state.current_notification_node == NULL) {
-//         LOG_ERR("Current notification node is NULL\n");
-//         return;
-//     }
-
-//     // Get the previous node's sys_dnode_t pointer
-//     sys_dnode_t *prev_node_ptr = sys_dlist_peek_prev(&watch_state.notification_list, &watch_state.current_notification_node->node);
-
-//     if (prev_node_ptr != NULL) {
-//         // Convert sys_dnode_t pointer to NotificationNode pointer
-//         struct NotificationNode *previous_node = CONTAINER_OF(prev_node_ptr, struct NotificationNode, node);
-//         watch_state.current_notification_node = previous_node;
-//         LOG_INF("Switched to previous notification: id=%d, message='%s'\n",
-//                 watch_state.current_notification_node->data.notification_id,
-//                 watch_state.current_notification_node->data.message);
-//     } else {
-//         LOG_ERR("No previous node found (current node is head or not in the list)\n");
-//     }
-
-// }
-
 void watch_update_current_time(struct tm *new_time)
 {
     watch_state.current_time = new_time;
-    watch_display_update();
+    if(watch_state.current_screen_number == 0){
+        watch_display_update();
+    }
 }

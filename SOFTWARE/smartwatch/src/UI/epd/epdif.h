@@ -36,8 +36,6 @@
 #include <stdint.h>
 
 
-
-
 int  epdIf_init(void);
 void epdIf_digital_write_RST(int value); 
 void epdIf_digital_write_DC(int value);
@@ -45,6 +43,7 @@ void epdIf_digital_write_CS(int value);
 int  epdIf_digital_read();
 void delay_ms(int delaytime);
 void epdIf_spi_transfer(uint8_t data);
+
 
 
 #endif /* EPDIF_H */

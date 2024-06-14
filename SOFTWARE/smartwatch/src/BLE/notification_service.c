@@ -48,7 +48,6 @@ static ssize_t write_title(struct bt_conn *conn, const struct bt_gatt_attr *attr
     }
 
     strcpy(new_notification.title, (char *)buf);
-    // strcpy(new_notification.title, "TitleTitle");
     send_if_complete();
 
     return len;
