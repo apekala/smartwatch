@@ -5,5 +5,4 @@ void schedule_main_screen_return();
 
 void ui_init();
 
-
-#endif // UI_CONTROLLER_H
+#endif  // UI_CONTROLLER_H

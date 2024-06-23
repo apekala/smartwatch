@@ -3,7 +3,6 @@
 
 void ui_request_refresh();
 
-
 void ui_screen_refresh_thread();
 
-#endif // DISPLAY_H
+#endif  // DISPLAY_H

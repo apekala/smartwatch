@@ -40,7 +40,6 @@ target_sources(app PRIVATE
   src/UI/epd/font16.c
   src/UI/epd/font20.c
   src/UI/epd/font24.c
-  src/UI/epd/imagedata.c
 )
 
 # if(CONFIG_BUILD_WITH_TFM)

@@ -4,37 +4,32 @@
 #include <zephyr/logging/log.h>
 
 #include "UI/display.h"
-#include "accelerometer/accelerometer.h"
 #include "UI/ui_controller.h"
+#include "accelerometer/accelerometer.h"
 
 LOG_MODULE_REGISTER(watch_controller, LOG_LEVEL_DBG);
-
 
 struct WatchState watch_state = {
     .current_time = 0,
     .step_count = 0,
     .notification_count = 0,
-    .refresh_in_progress=false,
-    .current_screen_number = 0
-};
+    .refresh_in_progress = false,
+    .current_screen_number = 0};
 
 // temporary function, to be replaced with actual display update
-void watch_display_update()
-{
+void watch_display_update() {
     ui_request_refresh();
 };
 
 // initialize watch controller
-void watch_init()
-{
+void watch_init() {
     LOG_INF("Watch controller initializing...");
 
     sys_slist_init(&watch_state.notification_list);
     LOG_INF("Watch controller initialized");
 }
 
-static void delete_oldest_notification()
-{
+static void delete_oldest_notification() {
     struct NotificationNode *node = (struct NotificationNode *)sys_slist_peek_tail(&watch_state.notification_list);
     sys_slist_find_and_remove(&watch_state.notification_list, &node->node);
     watch_state.notification_count--;
@@ -42,17 +37,14 @@ static void delete_oldest_notification()
 }
 
 // add notification to the list
-void watch_add_notification(struct Notification notification)
-{
-    if (sys_slist_len(&watch_state.notification_list) >= MAX_NOTIFICATIONS)
-    {
+void watch_add_notification(struct Notification notification) {
+    if (sys_slist_len(&watch_state.notification_list) >= MAX_NOTIFICATIONS) {
         LOG_WRN("Notification list is full, deleting oldest notification");
         delete_oldest_notification();
     }
 
     struct NotificationNode *notification_node = (struct NotificationNode *)k_malloc(sizeof(struct NotificationNode));
-    if (notification_node == NULL)
-    {
+    if (notification_node == NULL) {
         LOG_ERR("Failed to allocate memory for a new notification node");
         return;
     }
@@ -81,10 +73,9 @@ struct Notification find_notification(uint8_t n) {
     }
 }
 
-void watch_update_current_time(struct tm *new_time)
-{
+void watch_update_current_time(struct tm *new_time) {
     watch_state.current_time = new_time;
-    if(watch_state.current_screen_number == 0){
+    if (watch_state.current_screen_number == 0) {
         watch_display_update();
     }
 }

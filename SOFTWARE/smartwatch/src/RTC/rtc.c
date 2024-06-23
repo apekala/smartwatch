@@ -6,7 +6,7 @@
 #include <zephyr/logging/log.h>
 
 #define RTC_FREQ 32768
-#define TIME_UPDATE_PERIOD_S 60 //1 minute
+#define TIME_UPDATE_PERIOD_S 60  // 1 minute
 // #define TIME_UPDATE_PERIOD_S 10                               // 10s
 #define TIME_UPDATE_PERIOD_US TIME_UPDATE_PERIOD_S * 1000000  // 10s
 

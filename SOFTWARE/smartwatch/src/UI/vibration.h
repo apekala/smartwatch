@@ -6,4 +6,4 @@
 void ui_vibration_init();
 void ui_vibrate(uint16_t time_ms);
 
-#endif // VIBRATION_H
+#endif  // VIBRATION_H

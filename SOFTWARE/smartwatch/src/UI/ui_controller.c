@@ -23,9 +23,9 @@ LOG_MODULE_REGISTER(ui_controller, LOG_LEVEL_DBG);
 
 struct k_work_delayable main_screen_return_work;
 
-void schedule_main_screen_return(){
+void schedule_main_screen_return() {
     int res = k_work_reschedule(&main_screen_return_work, K_MSEC(10000));
-    if(res<0){
+    if (res < 0) {
         LOG_ERR("brrr stop work reschedule error: %d", res);
     }
 }
@@ -44,7 +44,7 @@ void button_up_pressed(const struct device *dev, struct gpio_callback *cb, gpio_
     ui_vibrate(200);
     LOG_INF("button up pressed");
 
-    if(watch_state.current_screen_number >= 1){
+    if (watch_state.current_screen_number >= 1) {
         watch_state.current_screen_number--;
         schedule_main_screen_return();
         ui_request_refresh();
@@ -54,8 +54,8 @@ void button_up_pressed(const struct device *dev, struct gpio_callback *cb, gpio_
 void button_down_pressed(const struct device *dev, struct gpio_callback *cb, gpio_port_pins_t pins) {
     ui_vibrate(200);
     LOG_INF("button down pressed");
-    
-    if(watch_state.current_screen_number<watch_state.notification_count){
+
+    if (watch_state.current_screen_number < watch_state.notification_count) {
         watch_state.current_screen_number++;
         schedule_main_screen_return();
         ui_request_refresh();
@@ -67,11 +67,8 @@ static struct gpio_callback button1_cb_data;
 static struct gpio_callback button2_cb_data;
 static struct gpio_callback button3_cb_data;
 
-
-
-
-static void main_screen_return_cb(struct k_work *item){
-    if(watch_state.current_screen_number){
+static void main_screen_return_cb(struct k_work *item) {
+    if (watch_state.current_screen_number) {
         watch_state.current_screen_number = 0;
         ui_request_refresh();
     }

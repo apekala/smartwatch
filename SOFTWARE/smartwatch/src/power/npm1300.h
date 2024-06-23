@@ -9,5 +9,4 @@ void vibration_start();
 
 void vibration_stop();
 
-#endif // NPM1300_H
-
+#endif  // NPM1300_H
