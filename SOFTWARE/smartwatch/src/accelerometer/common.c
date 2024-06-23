@@ -28,8 +28,8 @@ LOG_MODULE_DECLARE(bma456, LOG_LEVEL_DBG);
 #define SPI_BMA  SPI_OP_MODE_MASTER | SPI_MODE_CPHA | SPI_MODE_CPOL  | SPI_WORD_SET(8) | SPI_LINES_SINGLE | SPI_TRANSFER_MSB
 
 // Buffers for communication with bma456
-__attribute__((aligned(4))) unsigned char bma456_rbuf[10000];    // buffer for data read from bma456
-__attribute__((aligned(4))) unsigned char bma456_wbuf[10000];    // buffer for data written to bma456
+__attribute__((aligned(4))) unsigned char bma456_rbuf[50];    // buffer for data read from bma456
+__attribute__((aligned(4))) unsigned char bma456_wbuf[50];    // buffer for data written to bma456
 
 
 //buffer structures
