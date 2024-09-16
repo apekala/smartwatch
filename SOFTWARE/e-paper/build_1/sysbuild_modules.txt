@@ -1,2 +1,0 @@
-"nrf":"D:/aplikacje/nRF/v2.6.0/nrf":"D:/aplikacje/nRF/v2.6.0/nrf/sysbuild"
-"mcuboot":"D:/aplikacje/nRF/v2.6.0/bootloader/mcuboot":"D:/aplikacje/nRF/v2.6.0/bootloader/mcuboot/boot/zephyr/sysbuild"
