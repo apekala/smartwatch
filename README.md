@@ -23,3 +23,8 @@ A smartwatch featuring a step counter, BLE connection for notifications, and aut
 - **Firmware:** Developed in C using Zephyr RTOS for reliable and real-time performance.
 - **Mobile App:** Built with Flutter to handle BLE communication and manage smartwatch settings.
 - **BLE Communication:** Allows the smartwatch to sync time and receive notifications from the phone.
+
+# Pictures
+
+![](img/on_wrist.png)
+![](img/no_case.jpg)
